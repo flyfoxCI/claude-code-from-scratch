@@ -1,0 +1,83 @@
+<svg viewBox="0 0 900 650" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="system-ui" font-size="24" font-weight="bold" fill="#1e293b">工具系统架构</text>
+
+  <!-- Tool Interface (Top) -->
+  <rect x="250" y="70" width="400" height="90" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="3"/>
+  <text x="450" y="105" text-anchor="middle" font-family="system-ui" font-size="16" font-weight="bold" fill="#b45309">Tool 接口定义 (Tool.ts)</text>
+  <text x="450" y="130" text-anchor="middle" font-family="system-ui" font-size="12" fill="#92400e">name | call() | description() | inputSchema | isConcurrencySafe() | isReadOnly()</text>
+
+  <!-- Arrows down to tool types -->
+  <line x1="300" y1="160" x2="200" y2="200" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="450" y1="160" x2="450" y2="200" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="600" y1="160" x2="700" y2="200" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Built-in Tools -->
+  <rect x="70" y="200" width="250" height="200" rx="12" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+  <text x="195" y="235" text-anchor="middle" font-family="system-ui" font-size="15" font-weight="bold" fill="#334155">内置工具 (43个)</text>
+
+  <!-- File Tools -->
+  <rect x="90" y="255" width="210" height="35" rx="6" fill="#dcfce7" stroke="#22c55e"/>
+  <text x="195" y="278" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="bold" fill="#166534">文件操作: Read/Write/Edit</text>
+
+  <rect x="90" y="300" width="210" height="35" rx="6" fill="#dcfce7" stroke="#22c55e"/>
+  <text x="195" y="323" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="bold" fill="#166534">BashTool: 命令执行</text>
+
+  <rect x="90" y="345" width="210" height="35" rx="6" fill="#dcfce7" stroke="#22c55e"/>
+  <text x="195" y="368" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="bold" fill="#166534">Search/GrepTool</text>
+
+  <!-- Custom/Agent Tools -->
+  <rect x="350" y="200" width="200" height="200" rx="12" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+  <text x="450" y="235" text-anchor="middle" font-family="system-ui" font-size="15" font-weight="bold" fill="#334155">自定义工具</text>
+
+  <rect x="370" y="260" width="160" height="35" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="450" y="283" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="bold" fill="#7e22ce">AgentTool: 子Agent</text>
+
+  <rect x="370" y="305" width="160" height="35" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="450" y="328" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="bold" fill="#7e22ce">WebSearchTool</text>
+
+  <rect x="370" y="350" width="160" height="35" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="450" y="373" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="bold" fill="#7e22ce">Read粉</text>
+
+  <!-- MCP Tools -->
+  <rect x="580" y="200" width="250" height="200" rx="12" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+  <text x="705" y="235" text-anchor="middle" font-family="system-ui" font-size="15" font-weight="bold" fill="#334155">MCP 协议扩展</text>
+
+  <rect x="600" y="260" width="210" height="35" rx="6" fill="#e0f2fe" stroke="#0ea5e9"/>
+  <text x="705" y="283" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="bold" fill="#0369a1">MCPClient 管理</text>
+
+  <rect x="600" y="305" width="210" height="35" rx="6" fill="#e0f2fe" stroke="#0ea5e9"/>
+  <text x="705" y="328" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="bold" fill="#0369a1">MCPResourceTool</text>
+
+  <rect x="600" y="350" width="210" height="35" rx="6" fill="#e0f2fe" stroke="#0ea5e9"/>
+  <text x="705" y="373" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="bold" fill="#0369a1">动态工具发现</text>
+
+  <!-- Tool Registration Flow -->
+  <rect x="150" y="450" width="600" height="100" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="450" y="485" text-anchor="middle" font-family="system-ui" font-size="15" font-weight="bold" fill="#475569">工具注册流程 (tools.ts)</text>
+
+  <rect x="180" y="500" width="140" height="35" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="250" y="523" text-anchor="middle" font-family="system-ui" font-size="11" font-weight="bold" fill="#b45309">1. 定义工具</text>
+
+  <line x1="320" y1="517" x2="360" y2="517" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <rect x="360" y="500" width="140" height="35" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="430" y="523" text-anchor="middle" font-family="system-ui" font-size="11" font-weight="bold" fill="#b45309">2. Zod Schema</text>
+
+  <line x1="500" y1="517" x2="540" y2="517" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <rect x="540" y="500" width="140" height="35" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="610" y="523" text-anchor="middle" font-family="system-ui" font-size="11" font-weight="bold" fill="#b45309">3. 注册到全局</text>
+
+  <!-- Tool Execution -->
+  <rect x="200" y="580" width="500" height="55" rx="12" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="450" y="610" text-anchor="middle" font-family="system-ui" font-size="14" font-weight="bold" fill="#15803d">
+    Tool Execution: ToolCall → Permission Check → Execute → Result
+  </text>
+</svg>

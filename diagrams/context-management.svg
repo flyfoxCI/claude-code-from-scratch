@@ -1,0 +1,73 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="system-ui" font-size="24" font-weight="bold" fill="#1e293b">上下文管理系统</text>
+
+  <!-- Input Sources -->
+  <rect x="50" y="80" width="800" height="100" rx="12" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+  <text x="450" y="110" text-anchor="middle" font-family="system-ui" font-size="16" font-weight="bold" fill="#334155">上下文输入源</text>
+
+  <rect x="80" y="125" width="150" height="40" rx="8" fill="#e0f2fe" stroke="#0ea5e9"/>
+  <text x="155" y="152" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="bold" fill="#0369a1">System Prompt</text>
+
+  <rect x="250" y="125" width="150" height="40" rx="8" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="325" y="152" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="bold" fill="#b45309">CLAUDE.md</text>
+
+  <rect x="420" y="125" width="150" height="40" rx="8" fill="#dcfce7" stroke="#22c55e"/>
+  <text x="495" y="152" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="bold" fill="#166534">Conversation History</text>
+
+  <rect x="590" y="125" width="150" height="40" rx="8" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="665" y="152" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="bold" fill="#7e22ce">Working Memory</text>
+
+  <!-- Arrows down -->
+  <line x1="155" y1="165" x2="155" y2="195" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="325" y1="165" x2="325" y2="195" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="495" y1="165" x2="495" y2="195" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="665" y1="165" x2="665" y2="195" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Context Construction -->
+  <rect x="200" y="195" width="500" height="80" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="3"/>
+  <text x="450" y="230" text-anchor="middle" font-family="system-ui" font-size="16" font-weight="bold" fill="#b45309">Context Construction (buildContext)</text>
+  <text x="450" y="255" text-anchor="middle" font-family="system-ui" font-size="12" fill="#92400e">消息列表 + Token 预算计算 + 优先级排序</text>
+
+  <!-- Arrow to budget check -->
+  <line x1="450" y1="275" x2="450" y2="305" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Token Budget -->
+  <rect x="200" y="305" width="230" height="100" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="315" y="340" text-anchor="middle" font-family="system-ui" font-size="14" font-weight="bold" fill="#475569">Token Budget 控制</text>
+  <text x="315" y="365" text-anchor="middle" font-family="system-ui" font-size="11" fill="#64748b">• maxTokens 限制</text>
+  <text x="315" y="385" text-anchor="middle" font-family="system-ui" font-size="11" fill="#64748b">• 预算分配策略</text>
+
+  <!-- Auto Compact -->
+  <rect x="470" y="305" width="230" height="100" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="585" y="340" text-anchor="middle" font-family="system-ui" font-size="14" font-weight="bold" fill="#475569">Auto-Compact</text>
+  <text x="585" y="365" text-anchor="middle" font-family="system-ui" font-size="11" fill="#64748b">• 阈值触发压缩</text>
+  <text x="585" y="385" text-anchor="middle" font-family="system-ui" font-size="11" fill="#64748b">• 摘要 + 保留最近消息</text>
+
+  <!-- Arrow to Compact Decision -->
+  <line x1="315" y1="405" x2="315" y2="435" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="585" y1="405" x2="585" y2="435" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Compact Decision -->
+  <rect x="280" y="435" width="340" height="60" rx="12" fill="#fce7f3" stroke="#ec4899" stroke-width="2"/>
+  <text x="450" y="465" text-anchor="middle" font-family="system-ui" font-size="14" font-weight="bold" fill="#be185d">压缩决策: 是否需要摘要?</text>
+  <text x="450" y="485" text-anchor="middle" font-family="system-ui" font-size="11" fill="#9d174d">保留关键信息 | 丢弃冗余 | 生成摘要</text>
+
+  <!-- Output to LLM -->
+  <line x1="450" y1="495" x2="450" y2="530" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <rect x="350" y="530" width="200" height="45" rx="8" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="450" y="558" text-anchor="middle" font-family="system-ui" font-size="14" font-weight="bold" fill="#0369a1">发送给 LLM</text>
+
+  <!-- Legend -->
+  <rect x="50" y="560" width="800" height="30" rx="6" fill="#f1f5f9"/>
+  <text x="450" y="580" text-anchor="middle" font-family="system-ui" font-size="11" fill="#64748b">
+    ch08: Token Budget | ch09: Auto-Compact | ch10: Reactive-Compact
+  </text>
+</svg>

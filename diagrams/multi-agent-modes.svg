@@ -1,0 +1,102 @@
+<svg viewBox="0 0 900 550" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="system-ui" font-size="24" font-weight="bold" fill="#1e293b">多代理架构模式</text>
+
+  <!-- Single Agent Mode -->
+  <rect x="50" y="80" width="250" height="200" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="175" y="115" text-anchor="middle" font-family="system-ui" font-size="16" font-weight="bold" fill="#475569">单代理模式</text>
+
+  <rect x="75" y="140" width="200" height="50" rx="8" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="175" y="170" text-anchor="middle" font-family="system-ui" font-size="14" font-weight="bold" fill="#0369a1">User</text>
+
+  <line x1="175" y1="190" x2="175" y2="210" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <rect x="75" y="210" width="200" height="50" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="175" y="240" text-anchor="middle" font-family="system-ui" font-size="14" font-weight="bold" fill="#b45309">Claude Code</text>
+
+  <!-- Coordinator Mode -->
+  <rect x="325" y="80" width="250" height="200" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="450" y="115" text-anchor="middle" font-family="system-ui" font-size="16" font-weight="bold" fill="#475569">协调者模式</text>
+
+  <rect x="375" y="140" width="150" height="40" rx="8" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="450" y="168" text-anchor="middle" font-family="system-ui" font-size="13" font-weight="bold" fill="#0369a1">User</text>
+
+  <line x1="450" y1="180" x2="450" y2="200" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <rect x="375" y="200" width="150" height="40" rx="8" fill="#f3e8ff" stroke="#a855f7" stroke-width="2"/>
+  <text x="450" y="228" text-anchor="middle" font-family="system-ui" font-size="13" font-weight="bold" fill="#7e22ce">Coordinator</text>
+
+  <!-- Worker agents -->
+  <line x1="380" y1="240" x2="350" y2="260" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="450" y1="240" x2="450" y2="260" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="520" y1="240" x2="550" y2="260" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <rect x="320" y="260" width="70" height="35" rx="6" fill="#dcfce7" stroke="#22c55e"/>
+  <text x="355" y="283" text-anchor="middle" font-family="system-ui" font-size="11" fill="#166534">Worker 1</text>
+
+  <rect x="415" y="260" width="70" height="35" rx="6" fill="#dcfce7" stroke="#22c55e"/>
+  <text x="450" y="283" text-anchor="middle" font-family="system-ui" font-size="11" fill="#166534">Worker 2</text>
+
+  <rect x="510" y="260" width="70" height="35" rx="6" fill="#dcfce7" stroke="#22c55e"/>
+  <text x="545" y="283" text-anchor="middle" font-family="system-ui" font-size="11" fill="#166534">Worker 3</text>
+
+  <!-- Team Mode -->
+  <rect x="600" y="80" width="250" height="200" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="725" y="115" text-anchor="middle" font-family="system-ui" font-size="16" font-weight="bold" fill="#475569">团队协作模式</text>
+
+  <rect x="645" y="140" width="160" height="40" rx="8" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="725" y="168" text-anchor="middle" font-family="system-ui" font-size="13" font-weight="bold" fill="#0369a1">User (Product Owner)</text>
+
+  <line x1="725" y1="180" x2="725" y2="200" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Team -->
+  <rect x="645" y="200" width="160" height="60" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="725" y="225" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="bold" fill="#b45309">Team</text>
+  <text x="725" y="245" text-anchor="middle" font-family="system-ui" font-size="10" fill="#92400e">coordinator + workers</text>
+
+  <line x1="665" y1="260" x2="645" y2="280" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="725" y1="260" x2="725" y2="280" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="785" y1="260" x2="805" y2="280" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <rect x="615" y="280" width="60" height="30" rx="6" fill="#dcfce7" stroke="#22c55e"/>
+  <text x="645" y="300" text-anchor="middle" font-family="system-ui" font-size="10" fill="#166534">coder</text>
+
+  <rect x="695" y="280" width="60" height="30" rx="6" fill="#dcfce7" stroke="#22c55e"/>
+  <text x="725" y="300" text-anchor="middle" font-family="system-ui" font-size="10" fill="#166534">reviewer</text>
+
+  <rect x="775" y="280" width="60" height="30" rx="6" fill="#dcfce7" stroke="#22c55e"/>
+  <text x="805" y="300" text-anchor="middle" font-family="system-ui" font-size="10" fill="#166534">executor</text>
+
+  <!-- AgentTool Pattern -->
+  <rect x="100" y="330" width="700" height="120" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="450" y="365" text-anchor="middle" font-family="system-ui" font-size="16" font-weight="bold" fill="#475569">子 Agent 实现: AgentTool</text>
+
+  <rect x="130" y="385" width="180" height="45" rx="8" fill="#e0f2fe" stroke="#0ea5e9"/>
+  <text x="220" y="413" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="bold" fill="#0369a1">AgentTool.call()</text>
+
+  <line x1="310" y1="407" x2="350" y2="407" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <rect x="350" y="385" width="200" height="45" rx="8" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="450" y="413" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="bold" fill="#b45309">创建子 QueryEngine</text>
+
+  <line x1="550" y1="407" x2="590" y2="407" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <rect x="590" y="385" width="180" height="45" rx="8" fill="#dcfce7" stroke="#22c55e"/>
+  <text x="680" y="413" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="bold" fill="#166534">独立 Agent 循环</text>
+
+  <!-- Key characteristics -->
+  <rect x="100" y="480" width="700" height="55" rx="8" fill="#f1f5f9"/>
+  <text x="450" y="510" text-anchor="middle" font-family="system-ui" font-size="13" fill="#475569">
+    <tspan font-weight="bold">关键特征:</tspan>
+    <tspan fill="#0ea5e9"> 并行执行</tspan> |
+    <tspan fill="#a855f7"> 独立状态</tspan> |
+    <tspan fill="#22c55e"> 结果聚合</tspan> |
+    <tspan fill="#f59e0b"> 层级通信</tspan>
+  </text>
+</svg>

@@ -1,0 +1,62 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="system-ui" font-size="24" font-weight="bold" fill="#1e293b">Agent 核心循环</text>
+
+  <!-- Main Loop Box -->
+  <rect x="250" y="80" width="300" height="420" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- Loop Label -->
+  <text x="400" y="115" text-anchor="middle" font-family="system-ui" font-size="16" font-weight="bold" fill="#475569">while (true)</text>
+
+  <!-- Step 1: Preprocessing -->
+  <rect x="280" y="140" width="240" height="60" rx="8" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="400" y="165" text-anchor="middle" font-family="system-ui" font-size="14" font-weight="bold" fill="#0369a1">1. 预处理</text>
+  <text x="400" y="185" text-anchor="middle" font-family="system-ui" font-size="12" fill="#075985">上下文管理、Token 检查</text>
+
+  <!-- Arrow 1->2 -->
+  <line x1="400" y1="200" x2="400" y2="220" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 2: LLM Call -->
+  <rect x="280" y="220" width="240" height="60" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="400" y="245" text-anchor="middle" font-family="system-ui" font-size="14" font-weight="bold" fill="#b45309">2. LLM 调用</text>
+  <text x="400" y="265" text-anchor="middle" font-family="system-ui" font-size="12" fill="#92400e">发送消息、接收流式响应</text>
+
+  <!-- Arrow 2->3 -->
+  <line x1="400" y1="280" x2="400" y2="300" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 3: Tool Execution -->
+  <rect x="280" y="300" width="240" height="60" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="400" y="325" text-anchor="middle" font-family="system-ui" font-size="14" font-weight="bold" fill="#15803d">3. 工具执行</text>
+  <text x="400" y="345" text-anchor="middle" font-family="system-ui" font-size="12" fill="#166534">检测 tool_use、执行工具</text>
+
+  <!-- Arrow 3->4 -->
+  <line x1="400" y1="360" x2="400" y2="380" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 4: Continue or Stop -->
+  <rect x="280" y="380" width="240" height="60" rx="8" fill="#f3e8ff" stroke="#a855f7" stroke-width="2"/>
+  <text x="400" y="405" text-anchor="middle" font-family="system-ui" font-size="14" font-weight="bold" fill="#7e22ce">4. 继续或终止</text>
+  <text x="400" y="425" text-anchor="middle" font-family="system-ui" font-size="12" fill="#6b21a8">检查停止条件</text>
+
+  <!-- Loop Back Arrow -->
+  <path d="M 280 410 Q 180 410 180 480 Q 180 510 250 510 L 280 510" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="120" y="450" font-family="system-ui" font-size="12" fill="#64748b">继续</text>
+
+  <!-- Stop Condition -->
+  <path d="M 520 410 Q 620 410 620 480 Q 620 510 550 510 L 520 510" fill="none" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="620" y="450" font-family="system-ui" font-size="12" fill="#ef4444">终止</text>
+
+  <!-- Legend -->
+  <rect x="50" y="530" width="700" height="50" rx="8" fill="#f1f5f9"/>
+  <text x="400" y="555" text-anchor="middle" font-family="system-ui" font-size="12" fill="#475569">
+    <tspan fill="#0ea5e9">●</tspan> 预处理
+    <tspan fill="#f59e0b">●</tspan> LLM调用
+    <tspan fill="#22c55e">●</tspan> 工具执行
+    <tspan fill="#a855f7">●</tspan> 循环控制
+  </text>
+</svg>
